@@ -1,0 +1,38 @@
+.about {
+  height: 100vh;
+  background-color: $header;
+  font-family: $main-font;
+
+  &__heading {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-family: $span-font;
+    color: $main-color;
+  }
+
+  &__content {
+    @include flex(center, space-between, row);
+    padding: 0 100px;
+    // padding: 3% 3%;
+  }
+
+  &__content-desc {
+    @include flex(space-around, flex-start, column);
+  }
+
+  &__content-text {
+    text-align: justify;
+    font-weight: 100;
+    line-height: 30px;
+  }
+
+  &__btn {
+    @include btn;
+  }
+
+  &__content-img {
+    margin-left: 100px;
+    width: 30%;
+  }
+}
