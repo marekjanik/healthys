@@ -26,3 +26,25 @@
     @include btn;
   }
 }
+
+@media (min-width: 2000px) {
+  .home {
+    &__greeting {
+      margin-top: 100px;
+    }
+    &__greeting-text {
+      font-size: 70px;
+    }
+  }
+}
+
+@media (min-width: 4000px) {
+  .home {
+    &__greeting {
+      margin-top: 200px;
+    }
+    &__greeting-text {
+      font-size: 90px;
+    }
+  }
+}
