@@ -1,0 +1,31 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin flex($x, $y, $direction) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+  flex-direction: $direction;
+}
+
+@mixin btn {
+  background-color: rgba(238, 238, 238, 0.6);
+  border: 1px solid #333;
+  color: #333;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    background-color: #377b4c;
+    border: 1px solid #377b4c;
+    color: white;
+  }
+}

@@ -1,0 +1,28 @@
+.home {
+  @include flex(none, center, column);
+  height: 100vh;
+  background-image: url(/images/hero.jpg);
+  background-size: cover;
+  background-position: center top;
+  font-family: $main-font;
+  &__greeting {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  &__greeting-text {
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-weight: 300;
+    color: $text-color;
+  }
+
+  &__greeting-span {
+    font-family: $span-font;
+    color: $main-color;
+  }
+
+  &__btn {
+    @include btn;
+  }
+}

@@ -1,0 +1,61 @@
+.header {
+  @include flex(space-between, center, row);
+  width: 100vw;
+  height: 70px;
+  padding: 0 30px;
+  border-bottom: 1px solid #333;
+  background-color: $header;
+  font-family: $main-font;
+
+  &__logo {
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  &__logo-icon {
+    display: inline-block;
+    color: $main-color;
+  }
+
+  &__logo-name {
+    display: inline-block;
+    font-family: $span-font;
+    color: $text-color;
+  }
+
+  &__nav-element {
+    @include reset-list;
+    display: inline-block;
+    margin: 0 15px;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-color;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 25px;
+  color: $text-color;
+}
+
+@media (max-width: 495px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
