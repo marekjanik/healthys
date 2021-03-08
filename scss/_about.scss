@@ -59,14 +59,14 @@
 @media (min-width: 2000px) {
   .about {
     &__heading {
-      font-size: 60px;
+      font-size: 50px;
     }
     &__content {
       padding: 0 200px;
     }
     &__content-text {
-      font-size: 32px;
-      line-height: 60px;
+      font-size: 20px;
+      line-height: 40px;
     }
     &__content-img {
       margin-left: 200px;
@@ -75,15 +75,27 @@
   }
 }
 
-@media (min-width: 4000px) {
+@media (min-width: 3000px) {
   .about {
     &__heading {
-      font-size: 80px;
+      font-size: 60px;
     }
 
     &__content-text {
-      font-size: 48px;
-      line-height: 80px;
+      font-size: 30px;
+      line-height: 50px;
+    }
+  }
+}
+
+@media (min-width: 4000px) {
+  .about {
+    &__heading {
+      font-size: 70px;
+    }
+
+    &__content-text {
+      line-height: 60px;
     }
   }
 }

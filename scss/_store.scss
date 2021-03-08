@@ -26,6 +26,11 @@
   &__cat {
     @include reset-link;
   }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid #333;
+  }
 }
 
 .products {
@@ -38,7 +43,8 @@
   }
 
   &__element {
-    width: 300px;
+    min-width: 300px;
+    max-width: 20%;
     margin: 10px;
     font-weight: 300;
     flex-grow: 1;
@@ -57,6 +63,34 @@
     cursor: pointer;
     &:hover {
       color: $main-color;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .store {
+    &__heading {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (min-width: 3000px) {
+  .store {
+    &__heading {
+      font-size: 60px;
+    }
+
+    &__element {
+      width: 1000px;
+    }
+  }
+}
+
+@media (min-width: 4000px) {
+  .store {
+    &__heading {
+      font-size: 70px;
     }
   }
 }
