@@ -1,0 +1,20 @@
+.modal-cart {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  background-color: $header;
+
+  &__header {
+    border-bottom: 1px solid rgb(214, 214, 214);
+  }
+
+  &__heading {
+    margin: 20px 30px;
+    font-family: $main-font;
+    font-weight: 400;
+    color: $text-color;
+  }
+}
