@@ -1,12 +1,16 @@
 .modal-cart {
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 20vw;
-  background-color: $header;
-  color: $text-color;
+  display: none;
+  @include darken-bg;
+
+  &__content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20vw;
+    background-color: $header;
+    color: $text-color;
+  }
 
   &__header {
     border-bottom: 1px solid rgb(214, 214, 214);
@@ -18,27 +22,27 @@
     font-weight: bold;
   }
 
-  &__content {
+  &__bought {
     margin: 40px 20px 0 20px;
   }
 
-  &__content-item {
+  &__bought-item {
     @include flex(flex-start, flex-start, row);
     padding-bottom: 20px;
     border-bottom: 1px solid rgb(214, 214, 214);
   }
 
-  &__item-img {
+  &__bought-img {
     width: 70px;
     border-radius: 50%;
     margin-right: 20px;
   }
 
-  &__item-info {
+  &__bought-info {
     font-weight: 400;
   }
 
-  &__item-price {
+  &__bought-price {
     font-weight: 300;
     color: rgb(150, 150, 150);
   }
@@ -48,4 +52,8 @@
   .modal-cart {
     width: 50vw;
   }
+}
+
+.modal-cart--active {
+  display: block;
 }

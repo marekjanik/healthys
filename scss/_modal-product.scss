@@ -1,0 +1,24 @@
+.modal-product {
+  display: none;
+  @include darken-bg;
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-product {
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+.modal-product--active {
+  display: block;
+}

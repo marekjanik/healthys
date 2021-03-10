@@ -39,13 +39,10 @@
   &__cart-items {
     @include flex(center, center, row);
     position: absolute;
-    top: -80%;
-    right: -80%;
+    top: -70%;
+    right: -70%;
     width: 22px;
     height: 22px;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid $main-color;
     font-size: 12px;
     font-weight: bold;
     color: rgb(223, 167, 25);
