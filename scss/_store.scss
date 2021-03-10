@@ -31,6 +31,25 @@
     border: none;
     border-bottom: 1px solid #333;
   }
+
+  &__cart {
+    position: relative;
+  }
+
+  &__cart-items {
+    @include flex(center, center, row);
+    position: absolute;
+    top: -80%;
+    right: -80%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid $main-color;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(223, 167, 25);
+  }
 }
 
 .products {

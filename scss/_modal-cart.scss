@@ -4,8 +4,9 @@
   top: 0;
   bottom: 0;
   right: 0;
-  width: 400px;
+  width: 20vw;
   background-color: $header;
+  color: $text-color;
 
   &__header {
     border-bottom: 1px solid rgb(214, 214, 214);
@@ -14,7 +15,37 @@
   &__heading {
     margin: 20px 30px;
     font-family: $main-font;
+    font-weight: bold;
+  }
+
+  &__content {
+    margin: 40px 20px 0 20px;
+  }
+
+  &__content-item {
+    @include flex(flex-start, flex-start, row);
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+  }
+
+  &__item-img {
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__item-info {
     font-weight: 400;
-    color: $text-color;
+  }
+
+  &__item-price {
+    font-weight: 300;
+    color: rgb(150, 150, 150);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-cart {
+    width: 50vw;
   }
 }
