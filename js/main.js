@@ -96,3 +96,21 @@ const filterByCateogries = function (e) {
 catBooks.addEventListener("click", filterByCateogries);
 catAccessories.addEventListener("click", filterByCateogries);
 catAll.addEventListener("click", filterByCateogries);
+
+// Filter by search bar
+const input = document.querySelector(".search__input");
+const productsList = document.querySelector(".products__list");
+const productsElement = document.querySelectorAll(".products__element");
+const iconSearch = document.querySelector(".search__search-icon");
+
+const searchElement = function () {
+  const searchText = input.value.toLowerCase();
+  let elements = [...productsElement];
+  elements = elements.filter((element) =>
+    element.textContent.toLowerCase().includes(searchText)
+  );
+  productsList.textContent = "";
+  elements.forEach((element) => productsList.appendChild(element));
+};
+
+iconSearch.addEventListener("click", searchElement);
