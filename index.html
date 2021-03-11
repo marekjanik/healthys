@@ -15,21 +15,21 @@
     <title>Welcome To Healthy's</title>
   </head>
   <body>
-    <header class="header">
-      <a href="" class="header__logo">
+    <header class="header" id="header">
+      <a href="#header" class="header__logo">
         <div class="header__logo-icon"><i class="fas fa-leaf"></i></div>
         <div class="header__logo-name">Healthy's</div>
       </a>
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-element">
-            <a href="" class="header__nav-link">Home</a>
+            <a href="#home" class="header__nav-link">Home</a>
           </li>
           <li class="header__nav-element">
-            <a href="" class="header__nav-link">About</a>
+            <a href="#about" class="header__nav-link">About</a>
           </li>
           <li class="header__nav-element">
-            <a href="" class="header__nav-link">Store</a>
+            <a href="#store" class="header__nav-link">Store</a>
           </li>
         </ul>
       </nav>
@@ -37,17 +37,19 @@
     </header>
     <!-- / header -->
 
-    <section class="home">
+    <section class="home" id="home">
       <div class="home__greeting">
         <h1 class="home__greeting-text">
           Welcome To <span class="home__greeting-span">Healthy's</span>
         </h1>
-        <button class="home__btn btn-explore">Explore</button>
+        <a href="#about"
+          ><button class="home__btn btn-explore">Explore</button></a
+        >
       </div>
     </section>
     <!-- / home -->
 
-    <section class="about">
+    <section class="about" id="about">
       <h2 class="about__heading">About Us</h2>
       <div class="about__content">
         <div class="about__content-desc">
@@ -67,14 +69,16 @@
             inventore excepturi, facilis ab tempore et vero quibusdam possimus
             veniam sunt commodi odio!
           </p>
-          <button class="about__btn btn-store">Visit Our Store</button>
+          <a href="#store"
+            ><button class="about__btn btn-store">Visit Our Store</button></a
+          >
         </div>
         <img src="/images/about.jpg" alt="" class="about__content-img" />
       </div>
     </section>
     <!-- / about -->
 
-    <section class="store">
+    <section class="store" id="store">
       <h2 class="store__heading">Our Store</h2>
       <div class="store__content">
         <nav class="search">
