@@ -30,30 +30,33 @@ iconCart.addEventListener("click", toggleClassModalCart);
 modalCart.addEventListener("click", toggleClassModalCart);
 
 // Add product to cart
-// const productName = document.querySelector(".products__element-name");
-// const productPrice = document.querySelector(".products__element-price");
-// const productImg = document.querySelector(".products__img");
-// const btnAdd = document.querySelectorAll(".products__element-add");
+const productName = document.querySelectorAll(".products__element-name");
+const productPrice = document.querySelectorAll(".products__element-price");
+const productImg = document.querySelectorAll(".products__img");
+const btnAdd = document.querySelectorAll(".products__element-add");
 
-// const productNameAdded = document.querySelector(".modal-cart__bought-name");
-// const productPriceAdded = document.querySelector(".modal-cart__bought-price");
-// const productImgAdded = document.querySelector(".modal-cart__bought-img");
+const productNameAdded = document.querySelector(".modal-cart__bought-name");
+const productPriceAdded = document.querySelector(".modal-cart__bought-price");
+const productImgAdded = document.querySelector(".modal-cart__bought-img");
 
-// const productAdded = {
-//   name: productName.textContent,
-//   price: productPrice.textContent,
-//   img: productImg.src,
-// };
+const productAdded = {
+  name: productName.textContent,
+  price: productPrice.textContent,
+  img: productImg.src,
+};
 
-// const addToCart = function () {
-//   productNameAdded.textContent = productAdded.name;
-//   productPriceAdded.textContent = productAdded.price;
-//   productImgAdded.src = productAdded.img;
-// };
+const addToCart = function () {
+  const priceAdded = this.previousElementSibling;
+  const nameAdded = priceAdded.previousElementSibling;
+  console.log(priceAdded.innerHTML);
+  console.log(nameAdded.innerHTML);
+  productNameAdded.textContent = nameAdded.innerHTML;
+  productPriceAdded.textContent = priceAdded.innerHTML;
+};
 
-// btnAdd.forEach((btn) => {
-//   btn.addEventListener("click", addToCart);
-// });
+btnAdd.forEach((btn) => {
+  btn.addEventListener("click", addToCart);
+});
 
 // Filter by categories
 const catAll = document.querySelector(".search__all");
