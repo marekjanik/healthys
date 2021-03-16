@@ -29,6 +29,7 @@
   &__bought-item {
     @include flex(flex-start, flex-start, row);
     padding-bottom: 20px;
+    margin-bottom: 20px;
     border-bottom: 1px solid rgb(214, 214, 214);
   }
 

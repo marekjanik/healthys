@@ -64,10 +64,12 @@ const addToCart = function () {
 
   const priceAdded = this.previousElementSibling;
   const nameAdded = priceAdded.previousElementSibling;
-  console.log(priceAdded.innerHTML);
-  console.log(nameAdded.innerHTML);
+
   boughtName.textContent = nameAdded.innerHTML;
   boughtPrice.textContent = priceAdded.innerHTML;
+
+  const cartItems = document.querySelector(".search__cart-items");
+  cartItems.textContent++;
 };
 
 btnAdd.forEach((btn) => {
