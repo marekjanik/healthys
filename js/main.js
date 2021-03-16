@@ -46,12 +46,28 @@ const productAdded = {
 };
 
 const addToCart = function () {
+  const boughtList = document.querySelector(".modal-cart__bought-list");
+  const boughtItem = document.createElement("li");
+  const boughtInfo = document.createElement("div");
+  const boughtName = document.createElement("p");
+  const boughtPrice = document.createElement("p");
+
+  boughtItem.classList.add("modal-cart__bought-item");
+  boughtInfo.classList.add("modal-cart__bought-info");
+  boughtName.classList.add("modal-cart__bought-name");
+  boughtPrice.classList.add("modal-cart__bought-price");
+
+  boughtList.appendChild(boughtItem);
+  boughtItem.appendChild(boughtInfo);
+  boughtInfo.appendChild(boughtName);
+  boughtInfo.appendChild(boughtPrice);
+
   const priceAdded = this.previousElementSibling;
   const nameAdded = priceAdded.previousElementSibling;
   console.log(priceAdded.innerHTML);
   console.log(nameAdded.innerHTML);
-  productNameAdded.textContent = nameAdded.innerHTML;
-  productPriceAdded.textContent = priceAdded.innerHTML;
+  boughtName.textContent = nameAdded.innerHTML;
+  boughtPrice.textContent = priceAdded.innerHTML;
 };
 
 btnAdd.forEach((btn) => {
