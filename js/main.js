@@ -30,20 +30,7 @@ iconCart.addEventListener("click", toggleClassModalCart);
 modalCart.addEventListener("click", toggleClassModalCart);
 
 // Add product to cart
-const productName = document.querySelectorAll(".products__element-name");
-const productPrice = document.querySelectorAll(".products__element-price");
-const productImg = document.querySelectorAll(".products__img");
 const btnAdd = document.querySelectorAll(".products__element-add");
-
-const productNameAdded = document.querySelector(".modal-cart__bought-name");
-const productPriceAdded = document.querySelector(".modal-cart__bought-price");
-const productImgAdded = document.querySelector(".modal-cart__bought-img");
-
-const productAdded = {
-  name: productName.textContent,
-  price: productPrice.textContent,
-  img: productImg.src,
-};
 
 const addToCart = function () {
   const boughtList = document.querySelector(".modal-cart__bought-list");
