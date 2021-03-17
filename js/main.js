@@ -122,6 +122,11 @@ const searchElement = function () {
 };
 
 iconSearch.addEventListener("click", searchElement);
+input.addEventListener("keyup", function (e) {
+  if (e.keyCode === 13) {
+    searchElement();
+  }
+});
 
 // Hamburger Menu
 const iconMenu = document.querySelector(".hamburger-menu");
