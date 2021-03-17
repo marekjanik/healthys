@@ -122,3 +122,22 @@ const searchElement = function () {
 };
 
 iconSearch.addEventListener("click", searchElement);
+
+// Hamburger Menu
+const iconMenu = document.querySelector(".hamburger-menu");
+const menuContent = document.querySelector(".hamburger-content");
+const menuLink = document.querySelectorAll(".hamburger-content__link");
+
+const displayMenu = function (e) {
+  e.preventDefault();
+  menuContent.classList.toggle("hamburger-content--active");
+};
+
+const removeMenu = function () {
+  menuContent.classList.remove("hamburger-content--active");
+};
+
+iconMenu.addEventListener("click", displayMenu);
+menuLink.forEach((link) => {
+  link.addEventListener("click", removeMenu);
+});
