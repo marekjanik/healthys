@@ -99,3 +99,11 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .about {
+    &__content-desc {
+      @include flex(space-around, center, column);
+    }
+  }
+}
